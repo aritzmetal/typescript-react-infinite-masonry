@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Masonry Should match snapshot: basic 1`] = `
+<body>
+  <div>
+    <div
+      class="infinite-scroll-component__outerdiv"
+    >
+      <div
+        class="infinite-scroll-component "
+        style="height: auto; overflow: auto;"
+      >
+        <div
+          class=""
+          style="position: relative; height: -16px;"
+        >
+          1
+          2
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
