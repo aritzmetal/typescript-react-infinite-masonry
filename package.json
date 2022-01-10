@@ -49,8 +49,8 @@
     "devDependencies": {
         "@commitlint/cli": "^13.1.0",
         "@commitlint/config-conventional": "^13.1.0",
-        "@testing-library/react": "^12.1.2",
         "@testing-library/jest-dom": "^5.16.1",
+        "@testing-library/react": "^12.1.2",
         "@types/bricks.js": "^1.8.2",
         "@types/jest": "^27.0.1",
         "@types/react": "^17.0.37",
