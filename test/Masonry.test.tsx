@@ -6,7 +6,7 @@ import Masonry from "../src/index"
 type Props = Parameters<typeof Masonry>[0]
 
 describe("Masonry", () => {
-    let wrapper: { baseElement: any }
+    let wrapper: { baseElement: Element | Element[] }
 
     beforeEach(() => {
         Object.defineProperty(window, "matchMedia", {
