@@ -4,7 +4,7 @@
 
 ## About
 
-A simple Masonry component that works out of the box. It is based on: - [Bricks.js](https://github.com/callmecavs/bricks.js) - [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
+A simple Masonry component that works out of the box. It is based on: [Bricks.js](https://github.com/callmecavs/bricks.js) [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
 
 Its use is intended for not so large amounts of elements on screen.
 
