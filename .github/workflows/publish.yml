@@ -1,4 +1,4 @@
-name: Release & Publish :rocket:
+name: Release & Publish
 
 on:
     push:
