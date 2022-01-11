@@ -25,7 +25,7 @@ Using --> `yarn`
   ### Example
 
 ```tsx
-import Masonry from 'react-masonry-infinite';
+import Masonry from 'typescript-react-infinite-masonry';
 
 ...
 <MasonryInfiniteScroll
