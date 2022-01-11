@@ -1,7 +1,3 @@
-# React Masonry Infinite
-
-[![npm](https://img.shields.io/npm/dy/localeval.svg)](https://npmjs.com/react-masonry-infinite)
-
 ## About
 
 A simple Masonry component that works out of the box. It is based on: - [Bricks.js](https://github.com/callmecavs/bricks.js) - [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component)
