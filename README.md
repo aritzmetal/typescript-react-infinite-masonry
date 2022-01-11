@@ -4,6 +4,10 @@ A simple Masonry component that works out of the box. It is based on: - [Bricks.
 
 Its use is intended for not so large amounts of elements on screen.
 
+# Typescript React Infinite Masonry
+
+[![npm](https://img.shields.io/npm/dy/localeval.svg)](https://www.npmjs.com/package/typescript-react-infinite-masonry)
+
 ### Instalation
 
 Using --> `npm`
