@@ -43,7 +43,6 @@
     },
     "dependencies": {
         "bricks.js": "^1.7.0",
-        "prop-types": "^15.5.10",
         "react-infinite-scroll-component": "^6.1.0"
     },
     "devDependencies": {
