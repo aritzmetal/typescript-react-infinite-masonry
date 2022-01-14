@@ -24,7 +24,7 @@ Using --> `yarn`
 import Masonry from 'typescript-react-infinite-masonry';
 
 ...
-<MasonryInfiniteScroll
+<Masonry
           dataLength={elements.length}
           hasMore={true}
           loader={<LoaderComponent />}
@@ -35,7 +35,7 @@ import Masonry from 'typescript-react-infinite-masonry';
               key={key}
             />
           ))}
-        </MasonryInfiniteScroll>
+</Masonry>
 ...
 ```
 
