@@ -1,9 +1,11 @@
 import React, { CSSProperties, useEffect, useRef, useState } from "react"
 import Bricks from "bricks.js"
 import type { SizeDetail, Instance } from "bricks.js"
-import InfiniteScroll, { Props as InfiniteScrollProps } from "react-infinite-scroll-component"
+import InfiniteScroll from "react-infinite-scroller"
 
-export interface Props extends InfiniteScrollProps {
+type InfiniteScrollProps = InfiniteScroll["props"]
+
+export interface Props extends Omit<InfiniteScrollProps, "sizes"> {
     /** Classname to pass down styles */
     className?: string
     /** Update all options or just the new ones
@@ -38,7 +40,7 @@ export const MasonryInfiniteScroller = ({
     style = {},
     children,
     ...extraProps
-}: Props) => {
+}: Props): JSX.Element => {
     const ref = useRef<HTMLDivElement>(null)
     const [instance, setInstance] = useState<Instance>()
 
@@ -75,10 +77,12 @@ export const MasonryInfiniteScroller = ({
     }, [(children as React.ReactNode[]).length])
 
     return (
-        <InfiniteScroll {...extraProps}>
-            <div ref={ref} className={className} style={style}>
-                {children}
-            </div>
-        </InfiniteScroll>
+        <React.Fragment>
+            <InfiniteScroll {...extraProps}>
+                <div ref={ref} className={className} style={style}>
+                    {children}
+                </div>
+            </InfiniteScroll>
+        </React.Fragment>
     )
 }
