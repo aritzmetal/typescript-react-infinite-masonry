@@ -9,13 +9,13 @@ Its use is intended for not so large amounts of elements on screen.
 
 ### Instalation
 
-Using `npm`
+`npm`
 
 ```sh
   npm install --save typescript-react-infinite-masonry
 ```
 
-Using --> `yarn`
+`yarn`
 
 ```sh
   yarn add typescript-react-infinite-masonry
