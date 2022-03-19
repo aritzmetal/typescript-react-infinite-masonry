@@ -2,7 +2,7 @@
     "name": "typescript-react-infinite-masonry",
     "author": "Pedro Aritz Rasines Relloso <pedro.a.rasines@gmail.com>",
     "license": "MIT",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Infinite masonry on React with Typescript . React Masonry Layout - Bricks.js and React Infinite Scroll Component",
     "main": "dist/index.js",
     "module": "dist/index.js",
