@@ -1,11 +1,11 @@
-import React, { CSSProperties, useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Bricks from "bricks.js"
 import type { SizeDetail, Instance } from "bricks.js"
-import InfiniteScroll from "react-infinite-scroller"
+import InfiniteScrollComponent from "react-infinite-scroll-component"
+import { Props as InfiniteScrollProps } from "react-infinite-scroll-component"
+import { CSSProperties } from "react"
 
-type InfiniteScrollProps = InfiniteScroll["props"]
-
-export interface Props extends Omit<InfiniteScrollProps, "sizes"> {
+export interface Props extends InfiniteScrollProps {
     /** Classname to pass down styles */
     className?: string
     /** Update all options or just the new ones
@@ -18,7 +18,9 @@ export interface Props extends Omit<InfiniteScrollProps, "sizes"> {
     position?: boolean
     /** Media query and viewport breakpoints */
     sizes?: SizeDetail[]
-    /** Custom */
+    /** Callback invoked when the content is loaded */
+    onLoaded?: () => void
+    /** Custom styles */
     style?: CSSProperties
     /** Children of the masonry */
     children: React.ReactNode | JSX.Element
@@ -31,18 +33,24 @@ const defaultSizes: SizeDetail[] = [
     { mq: "1200px", columns: 4, gutter: 16 },
 ]
 
-export const MasonryInfiniteScroller = ({
-    className = "",
+export const Masonry = ({
+    className = "infinite-scroll",
     pack = false,
-    packed = `datum--packed`,
+    packed = `datum-packed`,
     position = true,
     sizes = defaultSizes,
+    onLoaded,
     style = {},
     children,
     ...extraProps
 }: Props): JSX.Element => {
     const ref = useRef<HTMLDivElement>(null)
     const [instance, setInstance] = useState<Instance>()
+
+    const loadMore = () => {
+        extraProps.next && extraProps.next()
+        onLoaded && onLoaded()
+    }
 
     useEffect(() => {
         if (ref.current) {
@@ -77,12 +85,14 @@ export const MasonryInfiniteScroller = ({
     }, [(children as React.ReactNode[]).length])
 
     return (
-        <React.Fragment>
-            <InfiniteScroll {...extraProps}>
+        <div className={`${className}-root`} style={{ overflow: "auto" }}>
+            <InfiniteScrollComponent {...extraProps} next={loadMore}>
                 <div ref={ref} className={className} style={style}>
                     {children}
                 </div>
-            </InfiniteScroll>
-        </React.Fragment>
+            </InfiniteScrollComponent>
+        </div>
     )
 }
+
+export default Masonry

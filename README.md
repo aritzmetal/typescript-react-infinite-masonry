@@ -28,10 +28,12 @@ import Masonry from 'typescript-react-infinite-masonry';
 
 ...
 <Masonry
+          datalength={elements.length}
           hasMore={true}
           loader={<LoaderComponent />}
+          onLoaded={handleOnLoaded}
           threshold={0.95}
-          loadMore={() => {
+          next={() => {
             if (!loading) {
               loadMore()
             }
@@ -47,10 +49,6 @@ import Masonry from 'typescript-react-infinite-masonry';
 ```
 
 ### Props
-
-## Props
-
-## Props
 
 |   Props   |  Type   | Default                                                                                                                                                      | Description                                                                                                            |
 | :-------: | :-----: | :----------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------- | -------- | ------- | ------ | ----------------------------------------------------------------------------------------------- | --- | ----- | ------ | ---- | ---------------------- |
